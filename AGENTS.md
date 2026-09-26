@@ -1,4 +1,4 @@
-# AGENTS.md -- mcp-server-trello
+# AGENTS.md -- mcp-trello
 
 As regras operacionais deste repo sao canonicas em [CLAUDE.md](CLAUDE.md) (fonte unica para Claude/Codex/Hermes). Leia-o antes de tocar em codigo.
 

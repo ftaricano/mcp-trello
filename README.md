@@ -1,13 +1,13 @@
-# MCP Server Trello
+# mcp-trello
 
-[![CI](https://github.com/ftaricano/mcp-server-trello/actions/workflows/ci.yml/badge.svg)](https://github.com/ftaricano/mcp-server-trello/actions/workflows/ci.yml)
+[![CI](https://github.com/ftaricano/mcp-trello/actions/workflows/ci.yml/badge.svg)](https://github.com/ftaricano/mcp-trello/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Node.js](https://img.shields.io/badge/node-%3E%3D20-brightgreen.svg)](https://nodejs.org)
 ![MCP](https://img.shields.io/badge/MCP-compatible-8A2BE2.svg)
 
-Professional Model Context Protocol (MCP) server and local CLI for Trello. It exposes 31 typed tools for boards, lists, cards, checklists, activity, and workspace navigation, with Trello-aware rate limiting and validation built in.
+Model Context Protocol (MCP) server and local CLI for Trello. It exposes 31 typed tools for boards, lists, cards, checklists, activity, and workspace navigation, with Trello-aware rate limiting and validation built in.
 
-This repository is maintained as `ftaricano/mcp-server-trello`. It is derived from MIT-licensed original work by Jarad DeLorenzo, with original copyright preserved and current ownership/provenance documented in [NOTICE.md](NOTICE.md).
+This repository is maintained as `ftaricano/mcp-trello` (formerly `ftaricano/mcp-server-trello`). It is derived from MIT-licensed original work by Jarad DeLorenzo, with original copyright preserved and current ownership/provenance documented in [NOTICE.md](NOTICE.md).
 
 ## Highlights
 
@@ -33,7 +33,7 @@ Use the package directly from npm-compatible MCP clients:
   "mcpServers": {
     "trello": {
       "command": "npx",
-      "args": ["-y", "@ftaricano/mcp-server-trello"],
+      "args": ["-y", "@ftaricano/mcp-trello"],
       "env": {
         "TRELLO_API_KEY": "replace_with_trello_api_key",
         "TRELLO_TOKEN": "replace_with_trello_token"
@@ -50,7 +50,7 @@ With `pnpx`:
   "mcpServers": {
     "trello": {
       "command": "pnpx",
-      "args": ["@ftaricano/mcp-server-trello"],
+      "args": ["@ftaricano/mcp-trello"],
       "env": {
         "TRELLO_API_KEY": "replace_with_trello_api_key",
         "TRELLO_TOKEN": "replace_with_trello_token"
@@ -63,8 +63,8 @@ With `pnpx`:
 Global install is also supported:
 
 ```bash
-npm install -g @ftaricano/mcp-server-trello
-mcp-server-trello
+npm install -g @ftaricano/mcp-trello
+mcp-trello
 ```
 
 ## Trello Token
@@ -185,8 +185,8 @@ Requests are queued through a token bucket limiter for Trello's published API li
 ## Development
 
 ```bash
-git clone https://github.com/ftaricano/mcp-server-trello.git
-cd mcp-server-trello
+git clone https://github.com/ftaricano/mcp-trello.git
+cd mcp-trello
 SKIP_PREPARE=true npm install
 cp .env.example .env
 ```
@@ -223,7 +223,7 @@ Keep changes focused and include tests for behavior changes.
 
 This project started as a fork of [delorenj/mcp-server-trello](https://github.com/delorenj/mcp-server-trello). Credit for the original MCP server scaffolding, base Trello API integration, and initial tool surface belongs to [Jarad DeLorenzo](https://github.com/delorenj).
 
-This repository is maintained under `ftaricano/mcp-server-trello`. Additions include the `trello` CLI binary, macOS Keychain credential resolution, expanded CLI card/board/list coverage, 152 unit tests, CI on Node.js 20/22, package metadata ownership, security documentation, and npm pack hardening.
+This repository is maintained under `ftaricano/mcp-trello`. Additions include the `trello` CLI binary, macOS Keychain credential resolution, expanded CLI card/board/list coverage, 152 unit tests, CI on Node.js 20/22, package metadata ownership, security documentation, and npm pack hardening.
 
 See [NOTICE.md](NOTICE.md) for the provenance statement.
 

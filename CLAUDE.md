@@ -1,10 +1,10 @@
-# CLAUDE.md -- mcp-server-trello
+# CLAUDE.md -- mcp-trello
 
-MCP server e CLI local para Trello, mantido como `@ftaricano/mcp-server-trello`. Expoe 31 ferramentas tipadas via Model Context Protocol e um binario `trello` para workflows de agente no terminal.
+MCP server e CLI local para Trello, mantido como `@ftaricano/mcp-trello`. Expoe 31 ferramentas tipadas via Model Context Protocol e um binario `trello` para workflows de agente no terminal.
 
 ## O que e
 
-Servidor MCP + CLI que conecta agentes ao Trello: boards, listas, cards, checklists, workspace e atividade recente. Publicado no npm (`@ftaricano/mcp-server-trello`). Consumido pelo ecossistema Jarvis via skill `trello-cpz` e por qualquer cliente MCP-compativel. Fork do projeto original de Jarad DeLorenzo (MIT); proveniencia documentada em `NOTICE.md`.
+Servidor MCP + CLI que conecta agentes ao Trello: boards, listas, cards, checklists, workspace e atividade recente. Pacote npm `@ftaricano/mcp-trello` (ainda nao publicado). Consumido por qualquer cliente MCP-compativel. Fork do projeto original de Jarad DeLorenzo (MIT); proveniencia documentada em `NOTICE.md`.
 
 ## Stack & estrutura
 
@@ -59,7 +59,7 @@ node build/cli.js list-boards --md
 - `SKIP_PREPARE=true` e obrigatorio no `npm install` de dev para evitar build automatico do `prepare` hook.
 - `build/` e gerado por `tsc` + `terser` -- nao editar arquivos em `build/` diretamente; a fonte e sempre `src/`.
 - Rate limiter (`rate-limiter.ts`) nao pode ser bypassado: a API Trello limita 300 req/10s por key e 100 req/10s por token; ultrapassar resulta em banimento temporario.
-- O binario `trello` (CLI) e o servidor MCP (`mcp-server-trello`) compartilham `trello-client.ts` -- mudancas ali afetam ambas as superficies.
+- O binario `trello` (CLI) e o servidor MCP (`mcp-trello`, alias legado `mcp-server-trello`) compartilham `trello-client.ts` -- mudancas ali afetam ambas as superficies.
 - Toda nova ferramenta MCP deve ser registrada em `mcp-tools.ts` com schema Zod completo e aparecer nos testes de paridade (`parity.test.ts`).
 - `ruvector.db` (SQLite de embeddings) e gerado em runtime -- nao commitar.
 
@@ -72,4 +72,4 @@ node build/cli.js list-boards --md
 
 ## Documentacao canonica
 
-- Skill: `trello-cpz` (hub skills) | Proveniencia: `NOTICE.md` | Seguranca: `SECURITY.md`
+- Proveniencia: `NOTICE.md` | Seguranca: `SECURITY.md`

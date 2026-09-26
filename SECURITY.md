@@ -8,7 +8,7 @@ Security fixes are handled on the default branch and in the latest published pac
 
 Please report vulnerabilities privately through GitHub Security Advisories:
 
-https://github.com/ftaricano/mcp-server-trello/security/advisories/new
+https://github.com/ftaricano/mcp-trello/security/advisories/new
 
 If advisories are not available to you, open a minimal issue that does not include exploit details, credentials, tokens, or private Trello data.
 
